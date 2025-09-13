@@ -1,0 +1,82 @@
+{% extends 'student/base.html' %}
+
+{% block content %}
+
+  {% if messages %}
+    <div id="toast-container" class="fixed top-5 left-1/2 transform -translate-x-1/2 z-50">
+      {% for message in messages %}
+        <div class="px-4 py-3 rounded-lg shadow-lg text-sm font-medium
+          {% if message.tags == 'error' %}
+            bg-red-600 text-white
+          {% elif message.tags == 'success' %}
+            bg-green-600 text-white
+          {% else %}
+            bg-gray-800 text-white
+          {% endif %}
+          transition transform opacity-100 duration-500"
+        >
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+<!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6">
+    
+    <!-- Subjects -->
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Subjects</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <a href="{% url 'lectures' %}" class="p-6 bg-white rounded-lg shadow text-center font-medium hover:bg-blue-50">
+    Physics
+  </a>
+  <a href="{% url 'lectures' %}" class="p-6 bg-white rounded-lg shadow text-center font-medium hover:bg-blue-50">
+    Chemistry
+  </a>
+  <a href="{% url 'lectures' %}" class="p-6 bg-white rounded-lg shadow text-center font-medium hover:bg-blue-50">
+    Math
+  </a>
+  <a href="{% url 'lectures' %}" class="p-6 bg-white rounded-lg shadow text-center font-medium hover:bg-blue-50">
+    English
+  </a>
+</div>
+
+
+    <!-- Academics -->
+    <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Academics</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold">Progress</h3>
+        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+          <div class="bg-blue-600 h-3 rounded-full" style="width: 70%;"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">70% Completed</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold">Assignments</h3>
+        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+          <div class="bg-green-500 h-3 rounded-full" style="width: 45%;"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">45% Done</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold">Exams</h3>
+        <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
+          <div class="bg-purple-500 h-3 rounded-full" style="width: 85%;"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">85% Prepared</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Auto-hide Toast -->
+  <script>
+    setTimeout(() => {
+      const toast = document.getElementById("toast-container");
+      if (toast) {
+        toast.classList.add("opacity-0", "translate-x-5");
+        setTimeout(() => toast.remove(), 500); // remove after fade
+      }
+    }, 3000); // 3s
+  </script>
+{% endblock content %}
+

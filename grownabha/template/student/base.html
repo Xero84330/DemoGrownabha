@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="bg-white shadow px-4 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="{% url 'dashboard' %}" class="text-xl font-bold text-blue-600 hover:underline">
+  GrowNabha
+</a>
+
+    
+    <!-- Dropdown -->
+    <div class="relative">
+      <button id="menu-btn" class="flex items-center px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">
+        ☰
+      </button>
+      <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">My Profile</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Achievements</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Results</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Attendance</a>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Change Class</a>
+      </div>
+    </div>
+  </nav>
+
+ {% block content %}
+ {% endblock %}
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const dropdown = document.getElementById('dropdown');
+    btn.addEventListener('click', () => {
+      dropdown.classList.toggle('hidden');
+    });
+  </script>
+  
+</body>
+</html>
+
+
+
