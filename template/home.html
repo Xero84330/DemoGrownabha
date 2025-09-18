@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Nabha</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div id="icon">
+                <a href="{% url 'home' %}">
+                <span id="grow">Grow</span>
+                <span id="nabha">Nabha</span>
+            </a>
+            </div>
+            <div id="login">
+                <button>
+                    Logout
+                </button>
+                <div>
+                    <img src="menu-line.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <main>
+        <section class="sec1">
+            <div class="left1">
+                <h2>Latest Updates</h2>
+                <hr>
+                <p>
+                    Update number 1
+                </p>
+                <hr>
+                <p>Update number 2</p>
+            </div>
+            <div class="right1">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/businessman-launching-edtech-startup-3d-icon-png-download-7528414.png"
+                    alt="img">
+            </div>
+
+        </section>
+        <section class="sec2">
+            <h1>Choose Your Subject</h1>
+            <div class="subjects">
+                <div>
+                    <i class="ri-book-open-line"></i>
+                    <a href="{% url 'subject' %}">Literature</a>
+                </div>
+                <div>
+                    <i class="ri-global-line"></i>
+                    <a href="{% url 'subject' %}">geography</a>
+                </div>
+                <div>
+                    <i class="ri-planet-line"></i>
+                    <a href="{% url 'subject' %}">Space Science</a>
+                </div>
+                <div>
+                    <i class="ri-eye-2-line"></i>
+                    <a href="{% url 'subject' %}">Biology</a>
+                </div>
+                <div>
+                    <i class="ri-smartphone-line"></i>
+                    <a href="{% url 'subject' %}">Communication</a>
+                </div>
+                <div>
+                    <i class="ri-video-line"></i>
+                    <a href="{% url 'subject' %}">Video Editing</a>
+                </div>
+                <div>
+                    <i class="ri-home-smile-line"></i>
+                    <a href="{% url 'subject' %}">Art & Craft</a>
+                </div>
+                <div>
+                    <i class="ri-infinity-line"></i>
+                    <a href="{% url 'subject' %}">Mathematics</a>
+                </div>
+                <div>
+                    <i class="ri-music-2-fill"></i>
+                    <a href="{% url 'subject' %}">Music</a>
+                </div>
+                <div>
+                    <i class="ri-computer-line"></i>
+                    <a href="{% url 'subject' %}">Computer</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="perf">
+                <h5>Performance:</h5>
+                <div class="progressBar">
+                    <div class="progress1"></div>
+                </div>
+            </div>
+            <div class="assig">
+                <h5>Assignment: </h5> 
+                <div class="progressBar">
+                    <div class="progress2"></div>
+                </div>
+            </div>
+             <div class="exam">
+                <h5>Exams: </h5> 
+                <div class="progressBar">
+                    <div class="progress3"></div>
+                </div>
+
+
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    background-color: #F5FBFF;
+}
+.backBtn a{
+text-decoration: none;
+color: #5E64B2;
+}
+main .ChapterName {
+    margin-left: 60px;
+}
+
+.insideChapter {
+    margin-left: 10%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+    border-radius: 15px;
+    height: 150px;
+    width: 80vw;
+    background-color: white;
+    box-shadow: 0 5px 5px rgb(119, 119, 119);
+}
+
+.insideChapter button {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #5E64B2;
+    color: white;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+
+.lectures h2 {
+    margin-top: 30px;
+    margin-left: 10%;
+}
+
+.lecture1 {
+    margin-left: 10%;
+    margin-top: 30px;
+    border-radius: 15px;
+    height: 150px;
+    width: 80vw;
+    background-color: white;
+    box-shadow: 0 5px 5px rgb(119, 119, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lecture1 button {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #5E64B2;
+    color: white;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.lecture1 div{
+    margin-left: 30px;
+}
+.lecture1 p{
+    color: #737373;
+}

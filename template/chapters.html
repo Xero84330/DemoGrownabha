@@ -1,0 +1,95 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'chapters.css' %}">
+    <link rel="stylesheet" href="{% static 'lessions.css' %}">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div id="icon">
+                <a href="{% url 'home' %}">
+                <span id="grow">Grow</span>
+                <span id="nabha">Nabha</span>
+                </a>
+            </div>
+            <div id="login">
+                <button>
+                    Logout
+                </button>
+                <div>
+                    <img src="menu-line.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <main>
+        <section class="backBtn">
+            <i class="ri-arrow-left-line"></i>
+            <a href="selectChapter.html">Back to subjects</a>
+        </section>
+
+        <section class="ChapterName">
+           <h1>Chapter 1 - Introduction to Fundamentals</h1>
+            
+        </section>
+
+        <section class="insideChapter">
+            <div class="chapterLeft">
+                <h3>Download Full Content</h3>
+                <p>Get the complete chapter material including notes, quizes and additionl resources.</p>
+            </div>
+            <button><i class="ri-download-line"></i>Download Chapter</button>
+
+        </section>
+
+        <section class="lectures">
+            <h2>Lectures</h2>
+            <div class="lecture1">
+                <div>
+                    <h3> <a href="{% url 'chapter' %}">Lecture 1: Getting Started</a> </h3>
+                    <p>Introduction to the fundamental concepts and overview of what you will learn. </p>
+                    <div>
+                        <button class="btn">Watch Lecture</button>
+                        <button class="btn2">Attempt Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="perf">
+                <h5>Performance:</h5>
+                <div class="progressBar">
+                    <div class="progress1"></div>
+                </div>
+            </div>
+            <div class="assig">
+                <h5>Assignment: </h5>
+                <div class="progressBar">
+                    <div class="progress2"></div>
+                </div>
+            </div>
+            <div class="exam">
+                <h5>Exams: </h5>
+                <div class="progressBar">
+                    <div class="progress3"></div>
+                </div>
+    </main>
+</body>
+
+</html>

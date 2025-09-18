@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter List</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="stylesheet" href="{% static 'lessions.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div id="icon">
+                <a href="{% url 'home' %}">
+                <span id="grow">Grow</span>
+                <span id="nabha">Nabha</span>
+            </a>
+            </div>
+            <div id="login">
+                <button>
+                    Logout
+                </button>
+                <div>
+                    <img src="menu-line.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <section class="backBtn">
+            <i class="ri-arrow-left-line"></i>
+            <a href="index.html">Back to subjects</a>
+        </section>
+
+        <section class="selectChapter">
+            <h1>Select a chapter</h1>
+        </section>
+
+        <section class="chapter">
+            <div class="chapter1">
+                <div class="chapterLeft">
+                    <h3>Chapter 1 - Introduction to Fundamentals</h3>
+                    <p>Learn the basic concept and principles that form the foundation of this subject.</p>
+                </div>
+                <button><a href="chapter.html">Open Chapter</a></button>
+            </div>
+            <div class="chapter2">
+                <div class="chapterLeft">
+                    <h3>Chapter 2 - Core Concepts and Theory</h3>
+                    <p>Dive deeper into the essential and understand their practical implementation.</p>
+                </div>
+                <button><a href="chapter.html">Open Chapter</a></button>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="perf">
+                <h5>Performance:</h5>
+                <div class="progressBar">
+                    <div class="progress1"></div>
+                </div>
+            </div>
+            <div class="assig">
+                <h5>Assignment: </h5>
+                <div class="progressBar">
+                    <div class="progress2"></div>
+                </div>
+            </div>
+            <div class="exam">
+                <h5>Exams: </h5>
+                <div class="progressBar">
+                    <div class="progress3"></div>
+                </div>
+    </main>
+</body>
+
+</html>
